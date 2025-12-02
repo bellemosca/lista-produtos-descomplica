@@ -1,0 +1,79 @@
+:root {
+  --pico-font-size: 87.5%;
+  --table-row-odd-bg: rgba(214, 51, 132, 0.25);
+  --table-row-even-bg: rgba(214, 51, 132, 0.08);
+  --table-row-text: #1f1f1f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --table-row-odd-bg: rgba(214, 51, 132, 0.45);
+    --table-row-even-bg: rgba(214, 51, 132, 0.2);
+    --table-row-text: #f7f7f7;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Ubuntu", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 1.75rem;
+  color: var(--pico-primary);
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.author-info {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(214, 51, 132, 0.1);
+}
+
+.table.table-striped tbody tr:nth-child(odd) td {
+  background-color: var(--table-row-odd-bg) !important;
+  color: var(--table-row-text);
+}
+
+.table.table-striped tbody tr:nth-child(even) td {
+  background-color: var(--table-row-even-bg) !important;
+  color: var(--table-row-text);
+}
+
+.table.table-striped {
+  border-radius: 12px;
+  overflow: hidden;
+}
